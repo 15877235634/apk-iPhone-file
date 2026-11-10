@@ -1,0 +1,18 @@
+云端打包步骤（无需在自己电脑安装任何东西）
+==========================================
+
+1. 打开 github.com，注册 / 登录一个免费账号
+2. 右上角 “+” -> New repository 新建一个仓库（名字随意，选 Public）
+   ⚠ 千万别点「Import repository / 导入仓库」——那是给“网上已有
+     git 仓库”用的，会要求填一个仓库网址；新建空白仓库用 New repository
+3. 把本文件夹（云端打包）里的全部文件上传到仓库
+   —— 最简单的方法：网页上点 “uploading an existing file”，
+      把文件夹里的文件拖进去（main.py、buildozer.spec 等）
+   —— .github 开头的隐藏文件夹网页上传不方便，单独这样建：
+      仓库页面点 Add file -> Create new file，文件名输入
+      .github/workflows/build-apk.yml（输到斜杠会自动建文件夹），
+      把 build-apk.yml 的内容粘贴进去，点 Commit changes
+4. 上传后进入仓库的 “Actions” 页面，选择 “Build APK”，点 “Run workflow”
+5. 等待 5~20 分钟，运行完成后点开运行记录，
+   下载底部的 “app-apk” 附件，里面就是 APK
+6. 把 APK 发到手机安装（手机需允许“安装未知应用”）
